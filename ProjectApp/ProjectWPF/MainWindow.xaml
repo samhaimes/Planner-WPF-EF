@@ -16,14 +16,19 @@
         <TextBox HorizontalAlignment="Left" Height="40" Margin="15,64,0,0" Text="Wednesday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen" Grid.Column="1"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="95,64,0,0" Text="Thursday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="3.75,0.501" Background="LightSeaGreen" Grid.Column="1"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="175,64,0,0" Text="Friday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="40" Margin="255,64,0,0" Text="Notes" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" Background="LightSalmon" Grid.Column="1"/>
-        <ListBox HorizontalAlignment="Left" Height="280" Margin="80,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon"/>
-        <ListBox HorizontalAlignment="Left" Height="280" Margin="160,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.ColumnSpan="2"/>
-        <ListBox HorizontalAlignment="Left" Height="280" Margin="15,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.Column="1"/>
-        <ListBox HorizontalAlignment="Left" Height="280" Margin="95,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.Column="1"/>
-        <ListBox HorizontalAlignment="Left" Height="280" Margin="175,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.Column="1"/>
-        <ListBox HorizontalAlignment="Left" Height="280" Margin="255,104,0,0" VerticalAlignment="Top" Width="240" Background="LightSeaGreen" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="415,64,0,0" Text="Notes" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="255,64,0,0" Text="Saturday&#x9;" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen" Grid.Column="1"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="335,64,0,0" Text="Sunday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen" Grid.Column="1" RenderTransformOrigin="1.812,0.501"/>
+        <ListBox HorizontalAlignment="Left" Height="280" Margin="80,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Name="MondayList" SelectionChanged="MondayList_SelectionChanged"/>
+        <ListBox HorizontalAlignment="Left" Height="280" Margin="160,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.ColumnSpan="2" Name="TuesdayList"/>
+        <ListBox HorizontalAlignment="Left" Height="280" Margin="15,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.Column="1" Name="WednesdayList"/>
+        <ListBox HorizontalAlignment="Left" Height="280" Margin="95,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.Column="1" Name="ThursdayList"/>
+        <ListBox HorizontalAlignment="Left" Height="280" Margin="175,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.Column="1" x:Name="FridayList"/>
+        <ListBox HorizontalAlignment="Left" Height="280" Margin="255,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.Column="1" Name="SaturdayList"/>
+        <ListBox HorizontalAlignment="Left" Height="280" Margin="335,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Grid.Column="1" x:Name="SundayList"/>
+        <ListBox HorizontalAlignment="Left" Height="280" Margin="415,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSeaGreen" Grid.Column="1"  Name="Notes" SelectionChanged="Notes_SelectionChanged"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="55,24,0,0" Text="Weekly Planner" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="30" FontFamily="Arial" Grid.Column="1"/>
+
 
     </Grid>
 </Window>

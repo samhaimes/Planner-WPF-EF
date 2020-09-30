@@ -5,11 +5,14 @@ VisualStudioVersion = 16.0.30503.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectModel", "ProjectApp\ProjectModel.csproj", "{4D835178-1121-4AB0-BDE3-A0A4B7738E6F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectUnitTesting", "ProjectUnitTesting\ProjectUnitTesting.csproj", "{56339AB2-C938-4975-BC2E-715999B52B8C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectUnitTesting", "ProjectUnitTesting\ProjectUnitTesting.csproj", "{56339AB2-C938-4975-BC2E-715999B52B8C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectWPF", "ProjectWPF\ProjectWPF.csproj", "{22FB7EB1-02A6-45D0-A897-7E21DFB92334}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectWPF", "ProjectWPF\ProjectWPF.csproj", "{22FB7EB1-02A6-45D0-A897-7E21DFB92334}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ProjectBusiness", "ProjectBusiness\ProjectBusiness.csproj", "{678609A2-2927-4E14-B647-75F4BC14C678}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ProjectBusiness", "ProjectBusiness\ProjectBusiness.csproj", "{678609A2-2927-4E14-B647-75F4BC14C678}"
+	ProjectSection(ProjectDependencies) = postProject
+		{4D835178-1121-4AB0-BDE3-A0A4B7738E6F} = {4D835178-1121-4AB0-BDE3-A0A4B7738E6F}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

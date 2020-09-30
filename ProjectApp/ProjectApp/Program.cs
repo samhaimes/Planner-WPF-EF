@@ -12,6 +12,10 @@ namespace ProjectApp
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
+
+            FamilyMember Sami = new FamilyMember { FamilyMemberId = 1, _FirstName = "Sami", _LastName = "Haimes" };
+            Activities Running = new Activities { ActivitiesId = 1, Activity = "Running" };
+            Console.WriteLine($"{Sami.ToString()} {Running.ToString()}");
         }
     }
 }

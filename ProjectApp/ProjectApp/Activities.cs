@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.OData.Edm;
+using System;
 using System.Collections.Generic;
 using System.Text;
 
@@ -16,9 +17,11 @@ namespace ProjectModel
           
         }
 
-        public override string ToString()
+        public override string ToString() 
         {
-            return $"is doing {Activity} from {StartTime} to {EndTime}"; // need to add before this the family member
+            return $" is doing {Activity}"; // from {StartTime} to {EndTime}"; // need to add before this the family member
         }
+
+
     }
 }
