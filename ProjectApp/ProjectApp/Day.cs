@@ -1,21 +1,21 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Dynamic;
 using System.Text;
 
 namespace ProjectModel
 {
-    class Day
+    public class Day
     {
-        public DayOfWeek DayofWeek {get; set;}
+        [Key]
+        public int DayId { get; set;}
 
-        public virtual FamilyMember FamilyMemberId { get; set; }
+        public DayOfWeek _dayofweek;
+        public int ActivitiesId { get; set; }
+        public virtual Activities Activities { get; set; }
 
-        public virtual Activities Activity { get; set; }
+        public Day() { }
 
-        public void Day()
-        {
-            throw new System.NotImplementedException();
-        }
     }
 }

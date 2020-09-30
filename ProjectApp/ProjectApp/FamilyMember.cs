@@ -1,23 +1,27 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace ProjectModel
 {
-    class FamilyMember
+    public  class FamilyMember
     {
 
-        public FamilyMember()
-        {
-
-        }
+        public FamilyMember() { }
+        
+        [Key]
         public int FamilyMemberId { get; set; }
-        public string FirstName { get; set; }
-        public string LastName { get; set; }
-        public string Stage { get; set; }
-        public string Occupation { get; set; }
 
+        public string _FirstName;
+        public string _LastName;
+        public string _Stage;
+        public string _Occupation;
 
+        public override string ToString()
+        {
+            return $"{_FirstName} {_LastName}"; // this could be split to a full name method and also add occupation
+        }
 
 
     }

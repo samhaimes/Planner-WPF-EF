@@ -3,27 +3,34 @@
   <Class Name="ProjectModel.FamilyMember">
     <Position X="0.5" Y="4.5" Width="2.75" />
     <TypeIdentifier>
-      <HashCode>AAAAAEAAAAAAAAAAAAAAAAAAAAEAAAAAAQgAAAAAAAg=</HashCode>
+      <HashCode>AAAAAAAAAQEAAAAEAAEAAAAAAAAAIAAAAAABAAAAAAA=</HashCode>
       <FileName>FamilyMember.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectModel.Day">
     <Position X="4" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAIAAAAAAAAAAAAAAAAAEAAAAAAAAAAEAABAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAAAAAEAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
       <FileName>Day.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="ProjectModel.Activities">
     <Position X="6.25" Y="4.5" Width="1.5" />
     <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <HashCode>AAAAAAAAAAQAAAAEAAAAAAAAIAAgAAAAAAAAAEAAAAA=</HashCode>
       <FileName>Activities.cs</FileName>
     </TypeIdentifier>
   </Class>
   <Class Name="System.Object" Collapsed="true">
     <Position X="4" Y="2.5" Width="1.5" />
     <TypeIdentifier />
+  </Class>
+  <Class Name="ProjectModel.ActivityDay">
+    <Position X="5" Y="7.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAA=</HashCode>
+      <FileName>ActivityDay.cs</FileName>
+    </TypeIdentifier>
   </Class>
   <Font Name="Segoe UI" Size="9" />
 </ClassDiagram>
