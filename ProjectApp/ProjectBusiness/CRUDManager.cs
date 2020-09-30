@@ -2,7 +2,7 @@
 
 namespace ProjectBusiness
 {
-    class Program
+    class CRUDManager
     {
         static void Main(string[] args)
         {
