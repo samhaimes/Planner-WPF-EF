@@ -14,6 +14,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using ProjectModel;
 using ProjectBusiness;
+using System.Globalization;
+using System.Diagnostics;
 
 namespace ProjectWPF
 {
@@ -30,14 +32,57 @@ namespace ProjectWPF
 
         //select which member week we are looking at 
 
+     
+        private void MondayButton_Click(object sender, RoutedEventArgs e)
+        {
+            MondayList.Items.Add(MondayTextBox.Text);
+        }
+
+        private void TuesdayButton_Click(object sender, RoutedEventArgs e)
+        {
+            TuesdayList.Items.Add(TuesdayTextBox.Text);
+        }
+
+        private void WednesdayButton_Click(object sender, RoutedEventArgs e)
+        {
+            WednesdayList.Items.Add(WednesdayTextBox.Text);
+        }
+
+        private void ThursdayButton_Click(object sender, RoutedEventArgs e)
+        {
+            ThursdayList.Items.Add(ThursdayTextBox.Text);
+        }
+
+        private void FridayButton_Click(object sender, RoutedEventArgs e)
+        {
+            FridayList.Items.Add(FridayTextBox.Text);
+        }
+
+        private void SaturdayButton_Click(object sender, RoutedEventArgs e)
+        {
+            SaturdayList.Items.Add(SaturdayTextBox.Text);
+        }
+
+        private void SundayButton_Click(object sender, RoutedEventArgs e)
+        {
+            SundayList.Items.Add(SundayTextBox.Text);
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            //TextBox1.Text = Day OF WEEK;
+            //TextBox2.Text = Activity;
+            //TextBox3.Text = _crudManager.StartTime;
+            //TextBox4.Text = _crudManager.EndTime;
+
+            //string TheDay = TextBox1.Text;
+            //string Output = $"{TextBox2.Text}: {TextBox3.Text} - {TextBox4.Text}";
+            //SundayList.Items.Add(Output);
+        }
+
         private void MondayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            //if the day of the week is Monday add the activity to here
-            //if (DayOfWeek == Monday)
-            //{ 
-            //   return  _crudManager.Action     // this is the activty & the timing 
 
-            //}
         }
 
         private void TuesdayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -50,7 +95,7 @@ namespace ProjectWPF
 
         }
 
-        private void ThurdayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        private void ThursdayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }
@@ -59,7 +104,6 @@ namespace ProjectWPF
         {
 
         }
-
 
         private void SaturdayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -73,10 +117,17 @@ namespace ProjectWPF
 
         private void Notes_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            // allow inputting data 
+
         }
 
-        //repeat this for every day of the week 
+        private void NotesButton_Click(object sender, RoutedEventArgs e)
+        {
 
+        }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }

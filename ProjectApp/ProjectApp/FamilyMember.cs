@@ -7,19 +7,22 @@ namespace ProjectModel
 {
     public class FamilyMember
     {
-
-        public  FamilyMember()
-        {
-        }
-        
-        [Key]
         public int FamilyMemberId { get; set; }
 
         public string _FirstName;
         public string _LastName;
         public string _Stage;
         public string _Occupation;
+        public  FamilyMember()
+        {
+        }
 
+        public FamilyMember(string FirstName, string LastName)
+        {
+            _FirstName = FirstName;
+            _LastName = LastName;
+        }
+        
         public override string ToString()
         {
             return $"{FullName()}";

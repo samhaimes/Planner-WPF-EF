@@ -16,4 +16,9 @@
     <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.4.0" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\ProjectApp\ProjectModel.csproj" />
+    <ProjectReference Include="..\ProjectBusiness\ProjectBusiness.csproj" />
+  </ItemGroup>
+
 </Project>
