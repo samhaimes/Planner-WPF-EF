@@ -45,10 +45,10 @@
         <TextBox HorizontalAlignment="Left" Height="80" Margin="175,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="FridayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen" Grid.Column="1"/>
         <TextBox HorizontalAlignment="Left" Height="80" Margin="255,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="SaturdayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen" Grid.Column="1"/>
         <TextBox HorizontalAlignment="Left" Height="80" Margin="335,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="SundayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="5,149,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" x:Name="TextBox1" />
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="5,179,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" x:Name="TextBox2" />
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="5,209,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" x:Name="TextBox3" />
-        <TextBox HorizontalAlignment="Left" Height="25" Margin="5,244,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="70" x:Name="TextBox4" />
+        <ListBox HorizontalAlignment="Left" Height="50" Margin="5,4,0,0" VerticalAlignment="Top" Width="70" x:Name="TextBox1" SelectionChanged="Day_SelectionChanged" />
+        <ListBox HorizontalAlignment="Left" Height="145" Margin="5,59,0,0" VerticalAlignment="Top" Width="70" x:Name="TextBox2" SelectionChanged="Activity_SelectionChanged" />
+        <ListBox HorizontalAlignment="Left" Height="25" Margin="5,209,0,0" VerticalAlignment="Top" Width="70" x:Name="TextBox3" SelectionChanged="StartTime_SelectionChanged" />
+        <ListBox HorizontalAlignment="Left" Height="25" Margin="5,244,0,0" VerticalAlignment="Top" Width="70" x:Name="TextBox4" SelectionChanged="EndTime_SelectionChanged" />
         <Button Content="Button" HorizontalAlignment="Left" Height="25" Margin="10,284,0,0" VerticalAlignment="Top" Width="55" Click="Button_Click"/>
 
 

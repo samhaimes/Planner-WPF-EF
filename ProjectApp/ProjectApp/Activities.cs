@@ -31,13 +31,13 @@ namespace ProjectModel
                 EndTime = EndTime_;
             return $"{Activity}: {StartTime} - {EndTime}";
         }
-        public override string ToString() 
+        public override string ToString()
         {
 
-            return $"{Activity}: {StartTime} - {EndTime}"; ; // from {StartTime} to {EndTime}"; // need to add before this the family member
+            return $"{Activity}"; ; // from {StartTime} to {EndTime}"; // need to add before this the family member
         }
 
 
-    } 
+    }
 
 }

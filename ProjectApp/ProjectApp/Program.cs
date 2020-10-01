@@ -23,7 +23,7 @@ namespace ProjectApp
             };
         { return activities.Count; }
     }
-    {
+    
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -66,8 +66,4 @@ namespace ProjectApp
 
         }
 
-            var peopleCount = people.Count;
-
-
     }
-} }

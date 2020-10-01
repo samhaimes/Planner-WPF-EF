@@ -28,11 +28,25 @@ namespace ProjectWPF
         public MainWindow()
         {
             InitializeComponent();
+            PopulateListBox();
+        }
+        
+        private void PopulateListBox()
+        {
+            TextBox2.ItemsSource = _crudManager.RetrieveActivities();
+            //TextBox1.ItemsSource = 
+         
+
         }
 
         //select which member week we are looking at 
 
-     
+     private void PopulateFields()
+        {
+ 
+                MondayList.Items.Add(_crudManager.SelectActivity);
+
+        }
         private void MondayButton_Click(object sender, RoutedEventArgs e)
         {
             MondayList.Items.Add(MondayTextBox.Text);
@@ -70,6 +84,9 @@ namespace ProjectWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
+            _crudManager.SetSelectActivity(TextBox2.SelectedItem);
+            MondayList.Items.Add(_crudManager.SelectActivity);
+
             //TextBox1.Text = Day OF WEEK;
             //TextBox2.Text = Activity;
             //TextBox3.Text = _crudManager.StartTime;
@@ -82,7 +99,7 @@ namespace ProjectWPF
 
         private void MondayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-
+           
         }
 
         private void TuesdayList_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -126,6 +143,26 @@ namespace ProjectWPF
         }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
+
+        private void Day_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+           
+        }
+
+        private void Activity_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void StartTime_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+        }
+
+        private void EndTime_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
 
         }

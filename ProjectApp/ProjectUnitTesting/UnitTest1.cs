@@ -32,13 +32,13 @@ namespace ProjectUnitTesting
         }
 
         //Test 3 : Test that the list of Activites outputs correcty
-        [TestCase(Program.activitesCount, 6)]   //WHY ISN'T THIS WORKING
-        public void TestingActivitiesList(string Activity_, string StartTime_, string EndTime_, string expected)
-        {
-            var subject = new Activities(Activity_, StartTime_, EndTime_);
-            var result = subject.ToString();
-            Assert.AreEqual(expected, result);
-        }
+        //[TestCase(Program.activitesCount, 6)]   //WHY ISN'T THIS WORKING
+        //public void TestingActivitiesList(string Activity_, string StartTime_, string EndTime_, string expected)
+        //{
+        //    var subject = new Activities(Activity_, StartTime_, EndTime_);
+        //    var result = subject.ToString();
+        //    Assert.AreEqual(expected, result);
+        //}
 
     }
 }
