@@ -29,19 +29,19 @@ namespace ProjectUnitTesting
             }
         }
         [Test] //Test to see if it works after adding an activity 
-        public void CheckIfItStillWorksAddingActivity()
-        {
-            using (var db = new ProjectContext())
-            {
-                var CountActivitiesBefore = db.GetActivities.Count();
-                _crudManager.CreateActivity("Golf", "09:00", "10:00");
-                var CountActivitesAfter = db.GetActivities.Count();
-                Assert.AreEqual(CountActivitiesBefore + 1, CountActivitesAfter);
+        //public void CheckIfItStillWorksAddingActivity()
+        //{
+        //    using (var db = new ProjectContext())
+        //    {
+        //        var CountActivitiesBefore = db.GetActivities.Count();
+        //        _crudManager.CreateActivity("Golf", "09:00", "10:00");
+        //        var CountActivitesAfter = db.GetActivities.Count();
+        //        Assert.AreEqual(CountActivitiesBefore + 1, CountActivitesAfter);
 
-            }
-        }
+        //    }
+        //}
 
-        [Test] //Test to see if it outputs the correct amount of family members from the table
+        [TestCase] //Test to see if it outputs the correct amount of family members from the table
         public void CheckHowManyMembersThereAre()
         {
             using (var db = new ProjectContext())
@@ -58,7 +58,7 @@ namespace ProjectUnitTesting
             using (var db = new ProjectContext())
             {
                 var CountFamilyBefore = db.FamilyMembers.Count();
-                _crudManager.CreateMember(5,"Heather", "Steel", "Adult", "Athlete");
+                _crudManager.CreateMember("Heather", "Steel", "Adult", "Athlete");
                 var CountFamilyAfter = db.FamilyMembers.Count();
                 Assert.AreEqual(CountFamilyBefore + 1, CountFamilyAfter);
 
@@ -75,14 +75,14 @@ namespace ProjectUnitTesting
             Assert.AreEqual(expected, result);
         }
 
-        //Test 2 : Test that Activites To String method is working
-        [TestCase("Cycling", "10:00", "11:00", "Cycling")]
-        public void TestingActivitiesMethod(string Activity_, string StartTime_, string EndTime_, string expected)
-        {
-            var subject = new Activities(Activity_, StartTime_, EndTime_);
-            var result = subject.ToString();
-            Assert.AreEqual(expected, result);
-        }
+        ////Test 2 : Test that Activites To String method is working
+        //[TestCase("Cycling", "10:00", "11:00", "Cycling")]
+        //public void TestingActivitiesMethod(string Activity_, string StartTime_, string EndTime_, string expected)
+        //{
+        //    var subject = new Activities(Activity_, StartTime_, EndTime_);
+        //    var result = subject.ToString();
+        //    Assert.AreEqual(expected, result);
+        //}
 
 
 

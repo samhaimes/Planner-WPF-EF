@@ -1,0 +1,57 @@
+﻿<Window x:Class="ProjectWPF.Planner"
+
+        WindowState="Maximized"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ProjectWPF"
+        mc:Ignorable="d"
+        Title="Planner" Height="450" Width="800">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="80,64,0,0" Text="Monday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="160,64,0,0" Text="Tuesday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="1.562,0.501" Background="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="239,64,0,0" Text="Wednesday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="319,64,0,0" Text="Thursday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="3.75,0.501" Background="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="399,64,0,0" Text="Friday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="639,64,0,0" Text="Notes" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSalmon"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="479,64,0,0" Text="Saturday&#x9;" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="40" Margin="559,64,0,0" Text="Sunday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen" RenderTransformOrigin="1.812,0.501"/>
+        <ListBox HorizontalAlignment="Left" Height="200" Margin="80,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Name="MondayList" SelectionChanged="MondayList_SelectionChanged"/>
+        <ListBox HorizontalAlignment="Left" Height="200" Margin="240,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Name="TuesdayList" SelectionChanged="TuesdayList_SelectionChanged"/>
+        <ListBox HorizontalAlignment="Left" Height="200" Margin="160,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Name="WednesdayList" SelectionChanged="WednesdayList_SelectionChanged"/>
+        <ListBox HorizontalAlignment="Left" Height="200" Margin="319,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Name="ThursdayList" SelectionChanged="ThursdayList_SelectionChanged"/>
+        <ListBox HorizontalAlignment="Left" Height="200" Margin="399,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" x:Name="FridayList" SelectionChanged="FridayList_SelectionChanged"/>
+        <ListBox HorizontalAlignment="Left" Height="200" Margin="479,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" Name="SaturdayList" SelectionChanged="SaturdayList_SelectionChanged"/>
+        <ListBox HorizontalAlignment="Left" Height="200" Margin="559,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSalmon" x:Name="SundayList" SelectionChanged="SundayList_SelectionChanged"/>
+        <ListBox HorizontalAlignment="Left" Height="200" Margin="639,104,0,0" VerticalAlignment="Top" Width="80" Background="LightSeaGreen"  Name="Notes" SelectionChanged="Notes_SelectionChanged"/>
+        <TextBox HorizontalAlignment="Center" Height="40" Margin="0,24,0,0" Text="Weekly Planner" TextWrapping="Wrap" VerticalAlignment="Top" Width="240" FontSize="30" FontFamily="Arial"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="20" Margin="80,384,0,0" VerticalAlignment="Top" Width="80" Click="MondayButton_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="20" Margin="160,384,0,0" VerticalAlignment="Top" Width="80" Click="TuesdayButton_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="20" Margin="239,384,0,0" VerticalAlignment="Top" Width="80" Click="WednesdayButton_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="20" Margin="319,384,0,0" VerticalAlignment="Top" Width="80" Click="ThursdayButton_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="20" Margin="399,384,0,0" VerticalAlignment="Top" Width="80" Click="FridayButton_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="20" Margin="479,384,0,0" VerticalAlignment="Top" Width="80" Click="SaturdayButton_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="20" Margin="558,384,0,0" VerticalAlignment="Top" Width="80" Click="SundayButton_Click"/>
+        <Button Content="Update" HorizontalAlignment="Left" Height="20" Margin="639,384,0,0" VerticalAlignment="Top" Width="80" Click="NotesButton_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="80" Margin="80,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Name="MondayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="80" Margin="160,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="TuesdayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="80" Margin="240,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="WednesdayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="80" Margin="319,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="ThursdayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="80" Margin="399,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="FridayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="80" Margin="479,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="SaturdayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen"/>
+        <TextBox HorizontalAlignment="Left" Height="80" Margin="559,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="SundayTextBox" TextChanged="TextBox_TextChanged" Background ="LightSeaGreen"/>
+        <ListBox HorizontalAlignment="Left" Height="145" Margin="5,59,0,0" VerticalAlignment="Top" Width="70" x:Name="TextBox2" SelectionChanged="Activity_SelectionChanged" />
+        <Button Content="Button" HorizontalAlignment="Left" Height="25" Margin="10,284,0,0" VerticalAlignment="Top" Width="55" Click="Button_Click"/>
+        <TextBox HorizontalAlignment="Left" Height="80" Margin="639,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="NotesTextBox" TextChanged="TextBox_TextChanged" Background ="LightSalmon"/>
+        <Button Content="To Updater" HorizontalAlignment="Left" Height="30" Margin="5,415,0,0" VerticalAlignment="Top" Width="160" Click="ToUpdater_Click"/>
+
+    </Grid>
+
+</Window>

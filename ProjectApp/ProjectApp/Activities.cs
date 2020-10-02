@@ -9,33 +9,25 @@ namespace ProjectModel
     {
         public int ActivitiesId { get; set; }
         public string Activity { get; set; }
-        public string StartTime { get; set; }
-        public string EndTime { get; set; }
+        public string ActivityDetails { get; set; }
 
         public Activities()
         { 
-
         }
 
-        public Activities(string Activity_, string StartTime_, string EndTime_)
+        public Activities(string Activity_, string ActivityDetails_)
         {
             Activity = Activity_;
-            StartTime = StartTime_;
-            EndTime = EndTime_;
+            ActivityDetails = ActivityDetails_;
         }
 
-        public string Event(string Activity_, string StartTime_, string EndTime_)
-        {
-                Activity = Activity_;
-                StartTime = StartTime_;
-                EndTime = EndTime_;
-            return $"{Activity}: {StartTime} - {EndTime}";
-        }
         public override string ToString()
         {
 
-            return $"{Activity} from {StartTime} to {EndTime}"; // need to add before this the family member
+            return $"{Activity}"; // need to add before this the family member
         }
+
+
 
 
     }
