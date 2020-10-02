@@ -49,8 +49,17 @@ namespace ProjectBusiness
                 db.GetActivities.RemoveRange(SelectedActivity);
                 db.SaveChanges();
             }
+        }
 
-
+        public void ChangeActivityDetail(string Activity, string ActivityDetail)
+        {
+            //var ActivityD = new Activities() { ActivityDetails = ActivityDetail };
+            using (var db = new ProjectContext())
+            { 
+            SelectActivity = db.GetActivities.Where(a => a.Activity == Activity).FirstOrDefault();
+            SelectActivity.ActivityDetails = ActivityDetail;
+            db.SaveChanges();
+            }
         }
 
         public string Event(string Activity, string ActivityDetails)
@@ -79,14 +88,14 @@ namespace ProjectBusiness
 
 
 
-        //public List<Days> RetrieveDays()
-        //{
-        //    using (var db = new ProjectContext())
-        //    {
+        public List<Day> RetrieveDays()
+        {
+            using (var db = new ProjectContext())
+            {
 
-        //        return db.Days.ToList();
-        //    }
-        //}
+                return db.Days.ToList();
+            }
+        }
 
 
 

@@ -33,14 +33,10 @@ namespace ProjectWPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-            Planner.Notes.Items.Add(_crudManager.SelectActivity);
+            //Planner.Notes.Items.Add(_crudManager.SelectActivity);
         }
-        
+        private void Activity_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
 
-        private void Activity_SelectionChanged(object sender, SelectionChangedEventArgs e)
-            {
-
-            }
         
 
         private void ToPlanner_Click(object sender, RoutedEventArgs e)
@@ -49,15 +45,8 @@ namespace ProjectWPF
             window.ShowDialog();
         }
 
-        private void TextBox_Activity(object sender, TextChangedEventArgs e)
-        {
-            //Activity.Text=_crudManager.SelectActivity.Activity;
-        }
-
-        private void TextBox_ActivityDetails(object sender, TextChangedEventArgs e)
-        {
-           // ActivityDetails.Text = _crudManager.SelectActivity.ActivityDetails;
-        }
+        private void TextBox_Activity(object sender, TextChangedEventArgs e) { }
+        private void TextBox_ActivityDetails(object sender, TextChangedEventArgs e) { }
 
         private void Button_UpdateActivities(object sender, RoutedEventArgs e)
         {
@@ -75,6 +64,20 @@ namespace ProjectWPF
         {
             var window = new UpdatePlanner();
             window.ShowDialog();
+        }
+
+        private void EditActivityDetail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            _crudManager.SetSelectActivity(TextBox2.SelectedItem);
+            EditActivityDetail.Text = _crudManager.SelectActivity.ActivityDetails;
+            var name = TextBox2.SelectedItem.ToString();
+            var details = EditActivityDetail.Text;
+            _crudManager.ChangeActivityDetail(name, details);
+            // call the selected activity 
+            //output the activity detail
+            //allow editing 
+            //save changes
+
         }
     }
 }

@@ -10,11 +10,8 @@
         xmlns:local="clr-namespace:ProjectWPF"
         mc:Ignorable="d"
         Title="Planner" Height="450" Width="800">
+
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="*"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="80,64,0,0" Text="Monday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="160,64,0,0" Text="Tuesday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" RenderTransformOrigin="1.562,0.501" Background="LightSeaGreen"/>
         <TextBox HorizontalAlignment="Left" Height="40" Margin="239,64,0,0" Text="Wednesday" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" Background="LightSeaGreen"/>
@@ -51,6 +48,7 @@
         <Button Content="Button" HorizontalAlignment="Left" Height="25" Margin="10,284,0,0" VerticalAlignment="Top" Width="55" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Height="80" Margin="639,304,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="80" x:Name="NotesTextBox" TextChanged="TextBox_TextChanged" Background ="LightSalmon"/>
         <Button Content="To Updater" HorizontalAlignment="Left" Height="30" Margin="5,415,0,0" VerticalAlignment="Top" Width="160" Click="ToUpdater_Click"/>
+        <ListBox HorizontalAlignment="Left" Name="TextBox1" Height="45" Margin="10,225,0,0" VerticalAlignment="Top" Width="60" />
 
     </Grid>
 
