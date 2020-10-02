@@ -29,7 +29,7 @@ namespace ProjectWPF
         private void PopulateListBox()
         {
             TextBox2.ItemsSource = _crudManager.RetrieveActivities();
-            //TextBox1.ItemsSource = _crudManager.RetrieveDays();
+            TextBox1.ItemsSource = _crudManager.RetrieveDays();
 
 
         }
@@ -159,6 +159,11 @@ namespace ProjectWPF
         {
             var window = new UpdatePlanner();
             window.ShowDialog();
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

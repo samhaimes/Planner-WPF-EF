@@ -7,8 +7,9 @@ namespace ProjectModel
     public partial class ActivityDay 
     {
         public int ActivityDayId { get; set; }
-        public int ActivitiesId { get; set; }
-        public int DayId { get; set; }
+        public Activities ActivitiesId { get; set; }
+        public Day DayId { get; set; }
+        public FamilyMember FamilyMemberId { get; set; }
 
     }
 }

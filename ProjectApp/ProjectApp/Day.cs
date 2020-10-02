@@ -11,7 +11,6 @@ namespace ProjectModel
     { 
     public int DayId { get; set; }
         public string _dayofweek { get; set; }
-        public Activities ActivityId { get; set; }
 
         public Day() { }
 
