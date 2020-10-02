@@ -15,11 +15,12 @@ namespace ProjectModel
         public int ActivitiesId { get; set; }
         public virtual Activities Activities { get; set; }
 
-        public Day() { }
         public Day(string dayofweek)
         {
             _dayofweek = dayofweek;
         }
+
+        public Day() { }
 
         public override string ToString()
         {

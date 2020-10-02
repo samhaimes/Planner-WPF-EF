@@ -9,10 +9,10 @@ namespace ProjectApp
 {
 
     class Program
-    { 
-                    public static int activitesCount()
-               {
-        var activities = new List<Activities>()
+    {
+        public static int activitesCount()
+        {
+            var activities = new List<Activities>()
             {
                 new Activities("Gym", "07:00", "08:00"),
                 new Activities("Work", "09:00", "17:00"),
@@ -21,9 +21,9 @@ namespace ProjectApp
                 new Activities("Painting", "09:00", "10:00"),
                 new Activities("Doctors", "09:00", "09:15"),
             };
-        { return activities.Count; }
-    }
-    
+            { return activities.Count; }
+        }
+
         static void Main(string[] args)
         {
             Console.WriteLine("Hello World!");
@@ -60,10 +60,22 @@ namespace ProjectApp
             {
                 Console.WriteLine(p);
             }
-        }
+
+            var daylist = new List<Day>()
+            {
+                new Day("Monday"),
+                new Day("Tuesday"),
+                new Day("Wednesday"),
+                new Day("Thursday"),
+                new Day("Friday"),
+                new Day("Saturday"),
+                new Day("Sunday"),
+                };
 
 
 
         }
+
 
     }
+}

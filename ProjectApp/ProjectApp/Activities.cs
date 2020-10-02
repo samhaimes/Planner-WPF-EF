@@ -34,7 +34,7 @@ namespace ProjectModel
         public override string ToString()
         {
 
-            return $"{Activity}"; ; // from {StartTime} to {EndTime}"; // need to add before this the family member
+            return $"{Activity} from {StartTime} to {EndTime}"; // need to add before this the family member
         }
 
 

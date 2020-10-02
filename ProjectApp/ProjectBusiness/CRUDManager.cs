@@ -14,9 +14,9 @@ namespace ProjectBusiness
         public Activities SelectActivity { get; set; }
         public Day SelectedDay { get; set; }
 
-        public void CreateMember(int FamilyMemberId, string FirstName, string LastName, string Stage, string Occupation)
+        public void CreateMember(string FirstName, string LastName, string Stage, string Occupation)
         {
-            var newMember = new FamilyMember() { FamilyMemberId = FamilyMemberId, _FirstName = FirstName, _LastName = LastName, _Stage = Stage, _Occupation = Occupation };
+            var newMember = new FamilyMember() {_FirstName = FirstName, _LastName = LastName, _Stage = Stage, _Occupation = Occupation };
             using (var db = new ProjectContext())
             {
                 db.FamilyMembers.Add(newMember);
@@ -24,9 +24,9 @@ namespace ProjectBusiness
             }
         }
 
-        public void CreateActivity(int ActivityId, string Activity, string StartTime, string EndTime)
+        public void CreateActivity(string Activity, string StartTime, string EndTime)
         {
-            var newActivity = new Activities() { ActivitiesId = ActivityId, Activity = Activity, StartTime = StartTime, EndTime = EndTime };
+            var newActivity = new Activities() { Activity = Activity, StartTime = StartTime, EndTime = EndTime };
             using (var db = new ProjectContext())
             {
                 db.GetActivities.Add(newActivity);
@@ -55,23 +55,37 @@ namespace ProjectBusiness
             }
         }
 
-        public List<string> _Day_ = new List<string>();
-            
-         
-
-   
 
 
-    //public List<Day> RetrieveDays()
-    //{
-    //    using (var db = new ProjectContext())
-    //    {
-    //        return db.Days.ToList();
-    //    }
-    //}
 
-    // create a method that takes the person the activity and the time 
-    public string Action(string Activity, DateTime StartTime, DateTime EndTime)
+        public List<Day> RetrieveDays()
+        {
+            using (var db = new ProjectContext())
+            {
+
+                return db.Days.ToList();
+            }
+        }
+
+
+
+        //public List<Day> RetrieveDays()
+        //{
+        //    var daylist = new List<Day>();
+        //    new Day("Monday");
+        //    new Day("Tuesday");
+        //    new Day("Wednesday");
+        //    new Day("Thursday");
+        //    new Day("Friday");
+        //    new Day("Saturday");
+        //    new Day("Sunday");
+        //    return daylist;
+        //}
+
+
+
+        // create a method that takes the person the activity and the time 
+        public string Action(string Activity, DateTime StartTime, DateTime EndTime)
         {
             using (var db = new ProjectContext())
             return $"{Activity}: {StartTime} - {EndTime}";

@@ -34,7 +34,7 @@ namespace ProjectWPF
         private void PopulateListBox()
         {
             TextBox2.ItemsSource = _crudManager.RetrieveActivities();
-            //TextBox1.ItemsSource = 
+            //TextBox1.ItemsSource = _crudManager.RetrieveDays();
          
 
         }
@@ -82,10 +82,15 @@ namespace ProjectWPF
             SundayList.Items.Add(SundayTextBox.Text);
         }
 
+        private void NotesButton_Click(object sender, RoutedEventArgs e)
+        {
+            Notes.Items.Add(NotesTextBox.Text);
+        }
+
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-            MondayList.Items.Add(_crudManager.SelectActivity);
+            Notes.Items.Add(_crudManager.SelectActivity);
 
             //TextBox1.Text = Day OF WEEK;
             //TextBox2.Text = Activity;
@@ -137,10 +142,7 @@ namespace ProjectWPF
 
         }
 
-        private void NotesButton_Click(object sender, RoutedEventArgs e)
-        {
 
-        }
 
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
