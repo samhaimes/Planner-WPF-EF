@@ -2,7 +2,7 @@
 
 namespace ProjectModel.Migrations
 {
-    public partial class InitialCreate : Migration
+    public partial class ChangingTables : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -25,8 +25,7 @@ namespace ProjectModel.Migrations
                     ActivitiesId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     Activity = table.Column<string>(nullable: true),
-                    StartTime = table.Column<string>(nullable: true),
-                    EndTime = table.Column<string>(nullable: true)
+                    ActivityDetails = table.Column<string>(nullable: true)
                 },
                 constraints: table =>
                 {
@@ -39,6 +38,7 @@ namespace ProjectModel.Migrations
                 {
                     DayId = table.Column<int>(nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
+                    _dayofweek = table.Column<string>(nullable: true),
                     ActivitiesId = table.Column<int>(nullable: false)
                 },
                 constraints: table =>
