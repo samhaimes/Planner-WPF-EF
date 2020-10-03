@@ -30,6 +30,7 @@ namespace ProjectWPF
         {
             TextBox2.ItemsSource = _crudManager.RetrieveActivities();
             DayBox.ItemsSource = _crudManager.RetrieveDays();
+            MondayList.ItemsSource = _crudManager.WeeklyActivity(1);
 
 
         }
@@ -90,6 +91,7 @@ namespace ProjectWPF
                 {
                     _crudManager.SetSelectActivity(TextBox2.SelectedItem);
                     MondayList.Items.Add(_crudManager.SelectActivity);
+                    _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Monday", _crudManager.SelectActivity.ActivitiesId, 1);
                 }
 
 
@@ -97,39 +99,45 @@ namespace ProjectWPF
                 {
                     _crudManager.SetSelectActivity(TextBox2.SelectedItem);
                     TuesdayList.Items.Add(_crudManager.SelectActivity);
+                    _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Tuesday", _crudManager.SelectActivity.ActivitiesId, 2);
                 }
 
                 if (DayBox.SelectedItem.ToString() == "Wednesday")
                 {
                     _crudManager.SetSelectActivity(TextBox2.SelectedItem);
                     WednesdayList.Items.Add(_crudManager.SelectActivity);
+                    _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Wednesday", _crudManager.SelectActivity.ActivitiesId, 3);
                 }
 
                 if (DayBox.SelectedItem.ToString() == "Thursday")
                 {
                     _crudManager.SetSelectActivity(TextBox2.SelectedItem);
                     ThursdayList.Items.Add(_crudManager.SelectActivity);
+                    _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Thursday", _crudManager.SelectActivity.ActivitiesId, 4);
                 }
 
                 if (DayBox.SelectedItem.ToString() == "Friday")
                 {
                     _crudManager.SetSelectActivity(TextBox2.SelectedItem);
                     FridayList.Items.Add(_crudManager.SelectActivity);
+                    _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Friday", _crudManager.SelectActivity.ActivitiesId, 5);
                 }
 
                 if (DayBox.SelectedItem.ToString() == "Saturday")
                 {
                     _crudManager.SetSelectActivity(TextBox2.SelectedItem);
                     SaturdayList.Items.Add(_crudManager.SelectActivity);
+                    _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Saturday", _crudManager.SelectActivity.ActivitiesId, 6);
                 }
                 if (DayBox.SelectedItem.ToString() == "Sunday")
                 {
                     _crudManager.SetSelectActivity(TextBox2.SelectedItem);
                     SundayList.Items.Add(_crudManager.SelectActivity);
+                    _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Sunday", _crudManager.SelectActivity.ActivitiesId, 7);
                 }
             }
            
-            _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), DayBox.SelectedItem.ToString(), _crudManager.SelectActivity.ActivitiesId, _crudManager.SelectedDay.DayId);
+          
 
         
         }
