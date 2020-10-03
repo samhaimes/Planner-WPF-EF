@@ -31,11 +31,11 @@ namespace ProjectWPF
             TextBox2.ItemsSource = _crudManager.RetrieveActivities();
             DayBox.ItemsSource = _crudManager.RetrieveDays();
 
-           // List<int> dayslist = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
-             
-            
+            // List<int> dayslist = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
 
-            MondayList.Items.Add(_crudManager.WeeklyActivity(1));
+            MondayList.ItemsSource = (_crudManager.WeeklyActivity(1));
+
+            //MondayList.Items.Add(_crudManager.WeeklyActivity(1));
             TuesdayList.Items.Add( _crudManager.WeeklyActivity(2));
             WednesdayList.Items.Add(_crudManager.WeeklyActivity(3));
             ThursdayList.Items.Add(_crudManager.WeeklyActivity(4));
