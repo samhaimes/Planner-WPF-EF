@@ -33,7 +33,31 @@ namespace ProjectWPF
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-            //Planner.Notes.Items.Add(_crudManager.SelectActivity);
+            ActivityName.Text= (_crudManager.SelectActivity).ToString();
+            ActivityDetail.Text = (_crudManager.SelectActivity.ActivityDetails).ToString();
+        }
+
+        private void Button_UpdateActivityDetail(object sender, RoutedEventArgs e)
+        {
+            var name = ActivityName.Text;
+            var details = ActivityDetail.Text;
+            _crudManager.ChangeActivityDetail(name, details);
+        }
+        private void EditActivityDetail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            //_crudManager.SetSelectActivity(TextBox2.SelectedItem);
+            var name = ActivityName.Text;
+            var details = ActivityDetail.Text;
+            _crudManager.ChangeActivityDetail(name, details);
+            // ActivityDetail.Text =  ;
+
+
+
+            // call the selected activity 
+            //output the activity detail
+            //allow editing 
+            //save changes
+
         }
         private void Activity_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
 
@@ -64,20 +88,6 @@ namespace ProjectWPF
         {
             var window = new UpdatePlanner();
             window.ShowDialog();
-        }
-
-        private void EditActivityDetail_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-            EditActivityDetail.Text = _crudManager.SelectActivity.ActivityDetails;
-            var name = TextBox2.SelectedItem.ToString();
-            var details = EditActivityDetail.Text;
-            _crudManager.ChangeActivityDetail(name, details);
-            // call the selected activity 
-            //output the activity detail
-            //allow editing 
-            //save changes
-
         }
     }
 }
