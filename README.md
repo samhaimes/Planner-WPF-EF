@@ -1,9 +1,47 @@
-# Project-Repo
+# Weekly Planner Application
+A simple weekly planner created using C#, SQL and Entity Framework.
+
+## Table of Contents 
+* [General Information](#general-information)
+* [Technologies](#technologies)
+* [Setup](#setup)
+* [Status](#status)
+* [Project Retrospective](#project-retrospective)
+
+### General Information
+This project was to create a 3 - Tier Application.
+This had to include
+* WPF frontend
+* SQL database backend with at least two linked tables
+* Use of Entity Framework to manage the model and database
+* Business Layer with CRUD application and unit tests
+
+The Planner Application WPF displays a Weekly Planner with a column for each day and also an additional notes section.
+Ability to add activites that happen every week such as Work on weekdays 9-5.
+Ability to add one of activities as well providing information about each activity.
+Ability to delete and update planner as needed.
+
+### Technologies
+* Using Visual Studio
+* SQL Server
+* C#
+
+### Setup
+
+### Status
 
 
-### Sprint 1 Retrospective 
+
+### Project Retrospective
+
+
+#### Sprint 1 Retrospective 
 * Pleased with how my first sprint went and first time creating a 3 - Tier App
 * Next Sprint I need to make sure my User Stories are smaller, take on one task at a time
 * Next Sprint I need to keep my code neat, make sure I'm using all tiers and not just re-writing code
 * Next Sprint sort front end, TOO MUCH going on 
 * Next Sprint need to take it step my step & take breaks so I have fresh eyes 
+
+#### Sprint 2 Retrospective 
+
+#### Sprint 3 Retrospective 
