@@ -30,7 +30,18 @@ namespace ProjectWPF
         {
             TextBox2.ItemsSource = _crudManager.RetrieveActivities();
             DayBox.ItemsSource = _crudManager.RetrieveDays();
-            MondayList.ItemsSource = _crudManager.WeeklyActivity(1);
+
+           // List<int> dayslist = new List<int>() { 1, 2, 3, 4, 5, 6, 7 };
+             
+            
+
+            MondayList.Items.Add(_crudManager.WeeklyActivity(1));
+            TuesdayList.Items.Add( _crudManager.WeeklyActivity(2));
+            WednesdayList.Items.Add(_crudManager.WeeklyActivity(3));
+            ThursdayList.Items.Add(_crudManager.WeeklyActivity(4));
+            FridayList.Items.Add(_crudManager.WeeklyActivity(5));
+            SaturdayList.Items.Add(_crudManager.WeeklyActivity(6));
+            SundayList.Items.Add(_crudManager.WeeklyActivity(7));
 
 
         }
@@ -42,40 +53,6 @@ namespace ProjectWPF
 
             MondayList.Items.Add(_crudManager.SelectActivity);
 
-        }
-        private void MondayButton_Click(object sender, RoutedEventArgs e)
-        {
-            MondayList.Items.Add(MondayTextBox.Text);
-        }
-
-        private void TuesdayButton_Click(object sender, RoutedEventArgs e)
-        {
-            TuesdayList.Items.Add(TuesdayTextBox.Text);
-        }
-
-        private void WednesdayButton_Click(object sender, RoutedEventArgs e)
-        {
-            WednesdayList.Items.Add(WednesdayTextBox.Text);
-        }
-
-        private void ThursdayButton_Click(object sender, RoutedEventArgs e)
-        {
-            ThursdayList.Items.Add(ThursdayTextBox.Text);
-        }
-
-        private void FridayButton_Click(object sender, RoutedEventArgs e)
-        {
-            FridayList.Items.Add(FridayTextBox.Text);
-        }
-
-        private void SaturdayButton_Click(object sender, RoutedEventArgs e)
-        {
-            SaturdayList.Items.Add(SaturdayTextBox.Text);
-        }
-
-        private void SundayButton_Click(object sender, RoutedEventArgs e)
-        {
-            SundayList.Items.Add(SundayTextBox.Text);
         }
 
         private void NotesButton_Click(object sender, RoutedEventArgs e)
@@ -211,6 +188,31 @@ namespace ProjectWPF
 
         }
 
+        private void Delete_Button(object sender, RoutedEventArgs e)
+        {
+//            _crudManager.DeleteWeeklyActivity(MondayList.SelectedItem, )
 
+
+            MondayList.Items.Remove(MondayList.SelectedItem);
+            TuesdayList.Items.Remove(TuesdayList.SelectedItem);
+            WednesdayList.Items.Remove(WednesdayList.SelectedItem);
+            ThursdayList.Items.Remove(ThursdayList.SelectedItem);
+            FridayList.Items.Remove(FridayList.SelectedItem);
+            SaturdayList.Items.Remove(SaturdayList.SelectedItem);
+            SundayList.Items.Remove(SundayList.SelectedItem);
+
+        }
+
+        private void SelectedActivityDetail_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            
+
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            MondayList.SelectedItem = _crudManager.SelectActivity;
+            SelectedActivityDetail.Text = (_crudManager.SelectActivity.ActivityDetails).ToString();
+        }
     }
 }
