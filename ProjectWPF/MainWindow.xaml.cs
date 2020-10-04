@@ -40,5 +40,10 @@ namespace ProjectWPF
             var window = new Planner();
             window.ShowDialog();
         }
+
+        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
+        {
+
+        }
     }
 }
