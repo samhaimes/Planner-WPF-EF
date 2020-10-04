@@ -61,8 +61,6 @@ namespace ProjectWPF
         }
         private void Activity_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
 
-
-
         private void ToPlanner_Click(object sender, RoutedEventArgs e)
         {
             var window = new Planner();
