@@ -30,9 +30,9 @@
             <TextBox HorizontalAlignment="Left" Name="ActivityDetail"  Height="110" Margin="365,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" TextChanged="EditActivityDetail_TextChanged"  Background="LightBlue" BorderBrush="LightBlue"/>
             <TextBox HorizontalAlignment="Left" Name="ActivityName" Height="30" Margin="365,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="165" FontFamily="Courier New"  Background="LightBlue" BorderBrush="LightBlue"/>
             <Button Content="Update Activity Detail" HorizontalAlignment="Left" Height="25" Margin="365,295,0,0" VerticalAlignment="Top" Width="165" Click="Button_UpdateActivityDetail" Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
-            <TextBox HorizontalAlignment="Left" Height="60" Margin="190,65,0,0" Text="Activities Organiser"  TextWrapping="Wrap" VerticalAlignment="Top" Width="405" TextChanged="TextBox_TextChanged" Background="Transparent" BorderBrush="Transparent" FontFamily="Courier New" FontSize="30"/>
+            <TextBox HorizontalAlignment="Left" Height="60" Margin="190,65,0,0" Text="Activities Organiser"  TextWrapping="Wrap" VerticalAlignment="Top" Width="405" Background="Transparent" BorderBrush="Transparent" FontFamily="Courier New" FontSize="30"/>
             <TextBox HorizontalAlignment="Left" Height="30" Margin="153,117,0,0" Text="Activity List" TextWrapping="Wrap" VerticalAlignment="Top" Width="149" FontFamily="Courier New" Background="Transparent" BorderBrush="Transparent" FontSize="18"/>
-            <TextBox HorizontalAlignment="Left" Height="30" Margin="360,116,0,0" Text="Update Activity" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontFamily="Courier New" Background="Transparent" BorderBrush="Transparent" FontSize="18" RenderTransformOrigin="0.138,1.333" TextChanged="TextBox_TextChanged"/>
+            <TextBox HorizontalAlignment="Left" Height="30" Margin="360,116,0,0" Text="Update Activity" TextWrapping="Wrap" VerticalAlignment="Top" Width="170" FontFamily="Courier New" Background="Transparent" BorderBrush="Transparent" FontSize="18" RenderTransformOrigin="0.138,1.333"/>
         </Grid>
     </Viewbox>
 </Window>

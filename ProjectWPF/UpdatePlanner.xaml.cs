@@ -19,7 +19,7 @@ namespace ProjectWPF
     /// </summary>
     public partial class UpdatePlanner : Window
     {
-        CRUDManager _crudManager = new CRUDManager();
+        readonly CRUDManager _crudManager = new CRUDManager();
         public UpdatePlanner()
         {
             InitializeComponent();
@@ -88,9 +88,5 @@ namespace ProjectWPF
             window.ShowDialog();
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
     }
 }

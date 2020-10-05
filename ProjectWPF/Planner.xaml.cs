@@ -20,7 +20,7 @@ namespace ProjectWPF
     /// </summary>
     public partial class Planner : Window
     {
-        private CRUDManager _crudManager = new CRUDManager();
+        private readonly CRUDManager _crudManager = new CRUDManager();
         public Planner()
         {
             InitializeComponent();
@@ -126,10 +126,6 @@ namespace ProjectWPF
 
         }
 
-        private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
-        {
-
-        }
 
         private void Day_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
@@ -140,7 +136,6 @@ namespace ProjectWPF
         {
 
         }
-
 
         private void ToUpdater_Click(object sender, RoutedEventArgs e)
         {
@@ -206,19 +201,6 @@ namespace ProjectWPF
             }
         }
 
-        }
-
-        private void SelectedActivityDetail_TextChanged(object sender, TextChangedEventArgs e)
-        {
-            
-
-        }
-
-        private void Button_Click_1(object sender, RoutedEventArgs e)
-        {
-            _crudManager.SetSelectActivity(MondayList.SelectedItem);
-           // MondayList.SelectedItem = _crudManager.SelectActivity;
-            SelectedActivityDetail.Text = (_crudManager.SelectActivity.ActivityDetails).ToString();
         }
 
         private void Button_Refresh(object sender, RoutedEventArgs e)

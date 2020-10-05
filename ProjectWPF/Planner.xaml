@@ -36,9 +36,7 @@
             <Button Content="Add" HorizontalAlignment="Left" Height="25" Margin="15,354,0,0" VerticalAlignment="Top" Width="89" Click="Button_Click"  Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
             <Button Content="Activites" HorizontalAlignment="Left" Height="22" Margin="10,36,0,0" VerticalAlignment="Top" Width="82" Click="ToUpdater_Click" Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
             <ListBox HorizontalAlignment="Left" Name="DayBox" Height="97" Margin="14,99,0,0" VerticalAlignment="Top" Width="91" SelectionChanged="Day_SelectionChanged" Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New" />
-            <Button Content="Delete" HorizontalAlignment="Left" Height="41" Margin="230,333,0,0" VerticalAlignment="Top" Width="85" Click="Delete_Button"  Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
-            <TextBox HorizontalAlignment="Left" Name="SelectedActivityDetail" Height="37" Margin="453,331,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="210" TextChanged="SelectedActivityDetail_TextChanged" Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
-            <Button Content="Display &#xa;Details" HorizontalAlignment="Left" Height="38" Margin="370,330,0,0" VerticalAlignment="Top" Width="73" Click="Button_Click_1"  Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
+            <Button Content="Delete" HorizontalAlignment="Left" Height="41" Margin="563,14,0,0" VerticalAlignment="Top" Width="85" Click="Delete_Button"  Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
             <TextBox HorizontalAlignment="Left" Height="20" Margin="14,83,0,0" Text="Add To Planner" TextWrapping="Wrap" VerticalAlignment="Top" Width="107" FontFamily="Courier New" Background="Transparent" BorderBrush="Transparent" FontSize="10"/>
 
         </Grid>
