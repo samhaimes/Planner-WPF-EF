@@ -34,8 +34,7 @@ namespace ProjectWPF
             new UpdatePlanner().Show();
             this.Close();
            
-            //var window = new UpdatePlanner();
-            //window.ShowDialog();
+          
 
         }
 
