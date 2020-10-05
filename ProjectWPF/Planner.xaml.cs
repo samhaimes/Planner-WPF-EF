@@ -139,74 +139,57 @@ namespace ProjectWPF
 
         private void ToUpdater_Click(object sender, RoutedEventArgs e)
         {
-            var window = new UpdatePlanner();
-            window.ShowDialog();
+            new UpdatePlanner().Show();
+            this.Close();
         }
 
         private void Delete_Button(object sender, RoutedEventArgs e)
         {
+
+            if (MondayList.SelectedItem != null)
             {
-
-                var bye = MondayList.SelectedItem;
-            _crudManager.DeleteWeeklyActivity(bye.ToString(), "Monday", 1);
-
-
-
-                if (DayBox.SelectedItem.ToString() == "Monday")
-            {
-                // _crudManager.SetSelectActivity(Monday.SelectedItem);
-               // _crudManager.DeleteWeeklyActivity(MondayList.SelectedItem.ToString(), "Monday.ActivitiesId, 1);
+                var byemon = MondayList.SelectedItem;
+                _crudManager.DeleteWeeklyActivity(byemon.ToString(), "Monday", 1);
             }
-
-
-            if (DayBox.SelectedItem.ToString() == "Tuesday")
+            if (TuesdayList.SelectedItem != null)
             {
-                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-                //  TuesdayList.ItemsSource = (_crudManager.SelectActivity);
-                _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Tuesday", _crudManager.SelectActivity.ActivitiesId, 2);
+                var byetues = TuesdayList.SelectedItem;
+                _crudManager.DeleteWeeklyActivity(byetues.ToString(), "Tuesday", 2);
             }
+            if (WednesdayList.SelectedItem != null)
+            { 
+                var byewed = WednesdayList.SelectedItem;
+                _crudManager.DeleteWeeklyActivity(byewed.ToString(), "Wednesday", 3);
+              }
+            if (ThursdayList.SelectedItem != null)
+            {
+                var byethurs = ThursdayList.SelectedItem;
+                _crudManager.DeleteWeeklyActivity(byethurs.ToString(), "Thursday", 4);
+            }
+            if (FridayList.SelectedItem != null)
+            {
+                var byefri = FridayList.SelectedItem;
+                _crudManager.DeleteWeeklyActivity(byefri.ToString(), "Friday", 5);
+            }
+            if (SaturdayList.SelectedItem != null)
+            {
+                var byesat = SaturdayList.SelectedItem;
 
-            if (DayBox.SelectedItem.ToString() == "Wednesday")
-            {
-                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-                //WednesdayList.Items.Add(_crudManager.SelectActivity);
-                _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Wednesday", _crudManager.SelectActivity.ActivitiesId, 3);
+                _crudManager.DeleteWeeklyActivity(byesat.ToString(), "Saturday", 6);
             }
-
-            if (DayBox.SelectedItem.ToString() == "Thursday")
+            if (SundayList.SelectedItem != null)
             {
-                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-                ThursdayList.Items.Add(_crudManager.SelectActivity);
-                _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Thursday", _crudManager.SelectActivity.ActivitiesId, 4);
+                var byesun = SundayList.SelectedItem;
+                _crudManager.DeleteWeeklyActivity(byesun.ToString(), "Sunday", 7);
             }
-
-            if (DayBox.SelectedItem.ToString() == "Friday")
-            {
-                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-                //FridayList.Items.Add(_crudManager.SelectActivity);
-                _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Friday", _crudManager.SelectActivity.ActivitiesId, 5);
-            }
-
-            if (DayBox.SelectedItem.ToString() == "Saturday")
-            {
-                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-                SaturdayList.Items.Add(_crudManager.SelectActivity);
-                _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Saturday", _crudManager.SelectActivity.ActivitiesId, 6);
-            }
-            if (DayBox.SelectedItem.ToString() == "Sunday")
-            {
-                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-                // SundayList.Items.Add(_crudManager.SelectActivity);
-                _crudManager.SaveActivityDay(TextBox2.SelectedItem.ToString(), "Sunday", _crudManager.SelectActivity.ActivitiesId, 7);
-            }
-        }
+        
 
         }
 
         private void Button_Refresh(object sender, RoutedEventArgs e)
         {
-            var window = new Planner();
-            window.ShowDialog();
+            new Planner().Show();
+            this.Close();
         }
     }
 }

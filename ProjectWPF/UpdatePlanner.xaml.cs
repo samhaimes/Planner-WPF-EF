@@ -63,8 +63,8 @@ namespace ProjectWPF
 
         private void ToPlanner_Click(object sender, RoutedEventArgs e)
         {
-            var window = new Planner();
-            window.ShowDialog();
+            new Planner().Show();
+            this.Close();
         }
 
         private void TextBox_Activity(object sender, TextChangedEventArgs e) { }
@@ -84,8 +84,8 @@ namespace ProjectWPF
 
         private void Button_Refresh(object sender, RoutedEventArgs e)
         {
-            var window = new UpdatePlanner();
-            window.ShowDialog();
+            new UpdatePlanner().Show();
+            this.Close();
         }
 
     }

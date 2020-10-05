@@ -31,14 +31,19 @@ namespace ProjectWPF
 
         private void ToUpdater_Click(object sender, RoutedEventArgs e)
         {
-            var window = new UpdatePlanner();
-            window.ShowDialog();
+            new UpdatePlanner().Show();
+            this.Close();
+           
+            //var window = new UpdatePlanner();
+            //window.ShowDialog();
+
         }
 
         private void ToPlanner_Click(object sender, RoutedEventArgs e)
         {
-            var window = new Planner();
-            window.ShowDialog();
+            
+           new Planner().Show();
+            this.Close();
         }
 
     }
