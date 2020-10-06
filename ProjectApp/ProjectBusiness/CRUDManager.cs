@@ -24,9 +24,9 @@ namespace ProjectBusiness
             }
         }
 
-        public void CreateActivity(string Activity, string StartTime, string EndTime)
+        public void CreateActivity(string Activity, string ActivityDetails)
         {
-            var newActivity = new Activities() { Activity = Activity, StartTime = StartTime, EndTime = EndTime };
+            var newActivity = new Activities() { Activity = Activity, ActivityDetails = ActivityDetails };
             using (var db = new ProjectContext())
             {
                 db.GetActivities.Add(newActivity);
@@ -36,6 +36,36 @@ namespace ProjectBusiness
 
         }
 
+        public void DeleteActivity(string Activity)
+        {
+          var oldActivity = new Activities() { Activity = Activity};
+            using (var db = new ProjectContext())
+            {
+                var SelectedActivity =
+                    from a in db.GetActivities
+                    where a.Activity == $"{oldActivity}"
+                    select a;
+
+                db.GetActivities.RemoveRange(SelectedActivity);
+                db.SaveChanges();
+            }
+        }
+
+        public void ChangeActivityDetail(string Activity, string ActivityDetail)
+        {
+            //var ActivityD = new Activities() { ActivityDetails = ActivityDetail };
+            using (var db = new ProjectContext())
+            { 
+            SelectActivity = db.GetActivities.Where(a => a.Activity == Activity).FirstOrDefault();
+            SelectActivity.ActivityDetails = ActivityDetail;
+            db.SaveChanges();
+            }
+        }
+
+        public string Event(string Activity, string ActivityDetails)
+            { 
+             return $"{Activity} Info: {ActivityDetails}";
+        }
         public void Delete()
         { }
 
@@ -81,15 +111,6 @@ namespace ProjectBusiness
         //    new Day("Sunday");
         //    return daylist;
         //}
-
-
-
-        // create a method that takes the person the activity and the time 
-        public string Action(string Activity, DateTime StartTime, DateTime EndTime)
-        {
-            using (var db = new ProjectContext())
-            return $"{Activity}: {StartTime} - {EndTime}";
-        }
 
         public void SetSelectActivity(object selectedItem)
         {

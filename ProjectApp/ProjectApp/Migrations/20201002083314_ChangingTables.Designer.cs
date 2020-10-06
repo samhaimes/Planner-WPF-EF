@@ -9,8 +9,8 @@ using ProjectModel;
 namespace ProjectModel.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    [Migration("20201001131709_ModifyDays")]
-    partial class ModifyDays
+    [Migration("20201002083314_ChangingTables")]
+    partial class ChangingTables
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -30,10 +30,7 @@ namespace ProjectModel.Migrations
                     b.Property<string>("Activity")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EndTime")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StartTime")
+                    b.Property<string>("ActivityDetails")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ActivitiesId");

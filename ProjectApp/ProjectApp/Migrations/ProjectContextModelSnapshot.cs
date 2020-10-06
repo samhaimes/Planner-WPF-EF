@@ -28,10 +28,7 @@ namespace ProjectModel.Migrations
                     b.Property<string>("Activity")
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("EndTime")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("StartTime")
+                    b.Property<string>("ActivityDetails")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("ActivitiesId");
