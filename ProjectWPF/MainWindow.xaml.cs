@@ -24,18 +24,20 @@ namespace ProjectWPF
     /// </summary>
     public partial class MainWindow : Window
     {
+        private readonly CRUDManager _crudManager = new CRUDManager();
         public MainWindow()
         {
             InitializeComponent();
+            FamilyMembers.ItemsSource = _crudManager.RetrieveFamily();
         }
+
+        
 
         private void ToUpdater_Click(object sender, RoutedEventArgs e)
         {
             new UpdatePlanner().Show();
             this.Close();
            
-          
-
         }
 
         private void ToPlanner_Click(object sender, RoutedEventArgs e)
@@ -45,5 +47,20 @@ namespace ProjectWPF
             this.Close();
         }
 
+        //protected override void FamilyMember_PreviewMouseDown(System.Windows.Input.MouseButtonEventArgs e)
+        //{
+        //    base.OnMouseDown
+        //    _crudManager.SetSelectedMember(FamilyMembers.SelectedItem);
+        //    string output = $"{_crudManager.SelectedFamilyMember}'s";
+
+        //    Member.AppendText(output);
+
+        //}
+
+        //        private void Member_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        //{
+           
+                
+        //}
     }
 }
