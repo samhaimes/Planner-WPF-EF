@@ -66,5 +66,8 @@ Ability to delete and update planner as needed.
 
 ### Class Diagram
 
+![CLass-Diagram](https://github.com/samhaimes/Project-Repo/blob/master/Class%20Diagram.png)
+
 
 ### Project Board
+ 
