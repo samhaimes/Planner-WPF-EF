@@ -27,8 +27,8 @@ namespace ProjectUnitTesting
                 Assert.AreEqual(CountActivities, 5);
 
             }
-        }
-        [Test] //Test to see if it works after adding an activity 
+    }
+        //[Test] //Test to see if it works after adding an activity 
         //public void CheckIfItStillWorksAddingActivity()
         //{
         //    using (var db = new ProjectContext())
@@ -41,7 +41,7 @@ namespace ProjectUnitTesting
         //    }
         //}
 
-        [TestCase] //Test to see if it outputs the correct amount of family members from the table
+        [Test] //Test to see if it outputs the correct amount of family members from the table
         public void CheckHowManyMembersThereAre()
         {
             using (var db = new ProjectContext())

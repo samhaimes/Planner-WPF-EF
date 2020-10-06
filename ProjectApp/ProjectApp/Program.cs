@@ -4,6 +4,7 @@ using Microsoft.EntityFrameworkCore.SqlServer;
 using ProjectModel;
 using System.Collections.Generic;
 using System.Diagnostics;
+using System.Linq;
 
 namespace ProjectApp
 {
@@ -72,7 +73,16 @@ namespace ProjectApp
                 new Day("Sunday"),
                 };
 
+            //List<Day> RetrieveDays = new List<Day>();
+            //foreach(d in RetrieveDays)
+            //{
+            //    RetrieveDays.Add(d);
+                
+            //}
+            //Console.WriteLine(RetrieveDays);
 
+  
+            //}
 
         }
 

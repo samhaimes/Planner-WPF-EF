@@ -1,0 +1,3 @@
+﻿1>------ Build started: Project: ProjectUnitTest, Configuration: Debug Any CPU ------
+1>ProjectUnitTest -> C:\Users\wendy\source\repos\Planner\ProjectUnitTest\bin\Debug\netcoreapp3.1\ProjectUnitTest.dll
+========== Build: 1 succeeded, 0 failed, 2 up-to-date, 0 skipped ==========

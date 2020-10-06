@@ -1,12 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ClassDiagram MajorVersion="1" MinorVersion="1">
-  <Class Name="ProjectModel.Days">
-    <Position X="4" Y="1.25" Width="1.5" />
-    <TypeIdentifier>
-      <HashCode>AAAAAAAAAAAAAEAEAAAAAAAACAAAAAAAAAQAAAAAAAA=</HashCode>
-      <FileName>Day.cs</FileName>
-    </TypeIdentifier>
-  </Class>
   <Class Name="ProjectModel.FamilyMember">
     <Position X="1.5" Y="2" Width="1.5" />
     <TypeIdentifier>

@@ -1,11 +1,24 @@
 ﻿using Microsoft.EntityFrameworkCore.Migrations;
 
-namespace ProjectModel.Migrations
+namespace Planner.Migrations
 {
-    public partial class ChangingTables : Migration
+    public partial class LinkingTable : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
+            migrationBuilder.CreateTable(
+                name: "Days",
+                columns: table => new
+                {
+                    DayId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1"),
+                    _dayofweek = table.Column<string>(nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Days", x => x.DayId);
+                });
+
             migrationBuilder.CreateTable(
                 name: "FamilyMembers",
                 columns: table => new
@@ -33,29 +46,16 @@ namespace ProjectModel.Migrations
                 });
 
             migrationBuilder.CreateTable(
-                name: "Days",
+                name: "Links",
                 columns: table => new
                 {
-                    DayId = table.Column<int>(nullable: false)
-                        .Annotation("SqlServer:Identity", "1, 1"),
-                    _dayofweek = table.Column<string>(nullable: true),
-                    ActivitiesId = table.Column<int>(nullable: false)
+                    LinkId = table.Column<int>(nullable: false)
+                        .Annotation("SqlServer:Identity", "1, 1")
                 },
                 constraints: table =>
                 {
-                    table.PrimaryKey("PK_Days", x => x.DayId);
-                    table.ForeignKey(
-                        name: "FK_Days_GetActivities_ActivitiesId",
-                        column: x => x.ActivitiesId,
-                        principalTable: "GetActivities",
-                        principalColumn: "ActivitiesId",
-                        onDelete: ReferentialAction.Cascade);
+                    table.PrimaryKey("PK_Links", x => x.LinkId);
                 });
-
-            migrationBuilder.CreateIndex(
-                name: "IX_Days_ActivitiesId",
-                table: "Days",
-                column: "ActivitiesId");
         }
 
         protected override void Down(MigrationBuilder migrationBuilder)
@@ -68,6 +68,9 @@ namespace ProjectModel.Migrations
 
             migrationBuilder.DropTable(
                 name: "GetActivities");
+
+            migrationBuilder.DropTable(
+                name: "Links");
         }
     }
 }

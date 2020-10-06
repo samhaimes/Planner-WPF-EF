@@ -13,6 +13,7 @@ namespace ProjectBusiness
         public FamilyMember SelectedFamilyMember { get; set; }
         public Activities SelectActivity { get; set; }
         public Day SelectedDay { get; set; }
+        public LinkTable activityDay { get; set; }
 
         public void CreateMember(string FirstName, string LastName, string Stage, string Occupation)
         {
@@ -35,6 +36,7 @@ namespace ProjectBusiness
 
 
         }
+       // public void CreateActivityDay(int )
 
         public void DeleteActivity(string Activity)
         {
@@ -62,10 +64,17 @@ namespace ProjectBusiness
             }
         }
 
-        public string Event(string Activity, string ActivityDetails)
-            { 
-             return $"{Activity} Info: {ActivityDetails}";
-        }
+        //public void ActivityDaySave()
+        //{
+        //    using (var db = new ProjectContext())
+        //    {
+        //        var SavePlan = 
+        //        from a in db.GetActivities
+        //        join l in db.linkTable on a.ActivitiesId equals l.ActivitiesId
+        //        join  d in db.Days on l.DayId equals d.DayId
+        //        where 
+        //    }
+        //}
         public void Delete()
         { }
 
@@ -85,9 +94,6 @@ namespace ProjectBusiness
             }
         }
 
-
-
-
         public List<Day> RetrieveDays()
         {
             using (var db = new ProjectContext())
@@ -97,20 +103,10 @@ namespace ProjectBusiness
             }
         }
 
-
-
-        //public List<Day> RetrieveDays()
-        //{
-        //    var daylist = new List<Day>();
-        //    new Day("Monday");
-        //    new Day("Tuesday");
-        //    new Day("Wednesday");
-        //    new Day("Thursday");
-        //    new Day("Friday");
-        //    new Day("Saturday");
-        //    new Day("Sunday");
-        //    return daylist;
-        //}
+        public void SetSelectedDay(object selectedItem)
+        {
+            SelectedDay = (Day)selectedItem;
+        }
 
         public void SetSelectActivity(object selectedItem)
         {

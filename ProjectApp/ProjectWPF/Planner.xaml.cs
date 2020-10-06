@@ -44,7 +44,11 @@ namespace ProjectWPF
         }
         private void MondayButton_Click(object sender, RoutedEventArgs e)
         {
-            MondayList.Items.Add(MondayTextBox.Text);
+            // MondayList.Items.Add(MondayTextBox.Text);
+
+            // if day selected is monday
+            // add acitivty to monday
+
         }
 
         private void TuesdayButton_Click(object sender, RoutedEventArgs e)
@@ -84,8 +88,46 @@ namespace ProjectWPF
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            _crudManager.SetSelectActivity(TextBox2.SelectedItem);
-            Notes.Items.Add(_crudManager.SelectActivity);
+            if (TextBox1.SelectedItem.ToString() == "Monday")
+            {
+                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
+                MondayList.Items.Add(_crudManager.SelectActivity);
+            };
+            if (TextBox1.SelectedItem.ToString() == "Tuesday")
+            {
+                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
+                TuesdayList.Items.Add(_crudManager.SelectActivity);
+            };
+            if (TextBox1.SelectedItem.ToString() == "Wednesday")
+            {
+                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
+                WednesdayList.Items.Add(_crudManager.SelectActivity);
+            };
+            if (TextBox1.SelectedItem.ToString() == "Thursday")
+            {
+                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
+                ThursdayList.Items.Add(_crudManager.SelectActivity);
+            };
+            if (TextBox1.SelectedItem.ToString() == "Friday")
+            {
+                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
+                FridayList.Items.Add(_crudManager.SelectActivity);
+            };
+            if (TextBox1.SelectedItem.ToString() == "Saturday")
+            {
+                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
+                SaturdayList.Items.Add(_crudManager.SelectActivity);
+            };
+            if (TextBox1.SelectedItem.ToString() == "Sunday")
+            {
+                _crudManager.SetSelectActivity(TextBox2.SelectedItem);
+                SundayList.Items.Add(_crudManager.SelectActivity);
+            };
+
+
+
+            //_crudManager.SetSelectActivity(TextBox2.SelectedItem);
+            //Notes.Items.Add(_crudManager.SelectActivity);
 
             //TextBox1.Text = Day OF WEEK;
             //TextBox2.Text = Activity;

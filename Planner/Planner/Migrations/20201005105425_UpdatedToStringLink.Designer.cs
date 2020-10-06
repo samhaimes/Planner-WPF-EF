@@ -2,15 +2,17 @@
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using ProjectModel;
+using Model;
 
-namespace ProjectModel.Migrations
+namespace Planner.Migrations
 {
     [DbContext(typeof(ProjectContext))]
-    partial class ProjectContextModelSnapshot : ModelSnapshot
+    [Migration("20201005105425_UpdatedToStringLink")]
+    partial class UpdatedToStringLink
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -18,7 +20,7 @@ namespace ProjectModel.Migrations
                 .HasAnnotation("Relational:MaxIdentifierLength", 128)
                 .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-            modelBuilder.Entity("ProjectModel.Activities", b =>
+            modelBuilder.Entity("Planner.Activities", b =>
                 {
                     b.Property<int>("ActivitiesId")
                         .ValueGeneratedOnAdd()
@@ -36,27 +38,22 @@ namespace ProjectModel.Migrations
                     b.ToTable("GetActivities");
                 });
 
-            modelBuilder.Entity("ProjectModel.Day", b =>
+            modelBuilder.Entity("Planner.Day", b =>
                 {
                     b.Property<int>("DayId")
                         .ValueGeneratedOnAdd()
                         .HasColumnType("int")
                         .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
 
-                    b.Property<int>("ActivitiesId")
-                        .HasColumnType("int");
-
                     b.Property<string>("_dayofweek")
                         .HasColumnType("nvarchar(max)");
 
                     b.HasKey("DayId");
 
-                    b.HasIndex("ActivitiesId");
-
                     b.ToTable("Days");
                 });
 
-            modelBuilder.Entity("ProjectModel.FamilyMember", b =>
+            modelBuilder.Entity("Planner.FamilyMember", b =>
                 {
                     b.Property<int>("FamilyMemberId")
                         .ValueGeneratedOnAdd()
@@ -68,11 +65,50 @@ namespace ProjectModel.Migrations
                     b.ToTable("FamilyMembers");
                 });
 
-            modelBuilder.Entity("ProjectModel.Day", b =>
+            modelBuilder.Entity("Planner.Link", b =>
                 {
-                    b.HasOne("ProjectModel.Activities", "Activities")
+                    b.Property<int>("LinkId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int")
+                        .HasAnnotation("SqlServer:ValueGenerationStrategy", SqlServerValueGenerationStrategy.IdentityColumn);
+
+                    b.Property<int>("ActivitiesId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("DayId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("FamilyMemberId")
+                        .HasColumnType("int");
+
+                    b.HasKey("LinkId");
+
+                    b.HasIndex("ActivitiesId");
+
+                    b.HasIndex("DayId");
+
+                    b.HasIndex("FamilyMemberId");
+
+                    b.ToTable("Links");
+                });
+
+            modelBuilder.Entity("Planner.Link", b =>
+                {
+                    b.HasOne("Planner.Activities", "Activities")
                         .WithMany()
                         .HasForeignKey("ActivitiesId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Planner.Day", "Day")
+                        .WithMany()
+                        .HasForeignKey("DayId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.HasOne("Planner.FamilyMember", "FamilyMember")
+                        .WithMany()
+                        .HasForeignKey("FamilyMemberId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
                 });

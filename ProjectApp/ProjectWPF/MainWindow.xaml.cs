@@ -34,11 +34,11 @@ namespace ProjectWPF
             var window = new UpdatePlanner();
             window.ShowDialog();
         }
-
+       
         private void ToPlanner_Click(object sender, RoutedEventArgs e)
         {
-            var window = new Planner();
-            window.ShowDialog();
+            var window1 = new Planner();
+            window1.ShowDialog();
         }
     }
 }
