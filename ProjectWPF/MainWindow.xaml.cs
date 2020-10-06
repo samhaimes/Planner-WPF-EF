@@ -12,7 +12,7 @@ namespace ProjectWPF
         public MainWindow()
         {
             InitializeComponent();
-            FamilyMembers.ItemsSource = _crudManager.RetrieveFamily();
+           
         }
 
         

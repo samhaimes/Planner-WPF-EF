@@ -21,9 +21,8 @@
             <ColumnDefinition/>
         </Grid.ColumnDefinitions>
         <Button Content="To Planner" HorizontalAlignment="Center" Height="30" Margin="0,160,0,0" VerticalAlignment="Top" Width="160" Click="ToPlanner_Click" Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
-        <Button Content="To Activities " HorizontalAlignment="Center" Height="30" Margin="0,240,0,0" VerticalAlignment="Top" Width="160" Click="ToUpdater_Click"  Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
+        <Button Content="To Activities " HorizontalAlignment="Center" Height="30" Margin="0,224,0,0" VerticalAlignment="Top" Width="160" Click="ToUpdater_Click"  Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
         <TextBox HorizontalAlignment="Center" Height="60" Margin="0,90,0,0" Text="Weekly Planner"  TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Background="Transparent" BorderBrush="Transparent" FontFamily="Courier New" FontSize="40"/>
-        <ListBox HorizontalAlignment="Left" Height="95" Margin="315,304,0,0" VerticalAlignment="Top" Width="175" Name="FamilyMembers"  Background="LightBlue" BorderBrush="LightBlue" FontFamily="Courier New"/>
         <TextBox HorizontalAlignment="Left" Height="60" Margin="222,24,0,0" Name="Member"  TextWrapping="Wrap" VerticalAlignment="Top" Width="350" Background="Transparent" BorderBrush="Transparent" FontFamily="Courier New" FontSize="40"/>
     </Grid>
 </Window>
