@@ -1,14 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows;
+﻿using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Shapes;
 using ProjectBusiness;
 using Planner;
 
@@ -45,19 +36,11 @@ namespace ProjectWPF
         }
         private void EditActivityDetail_TextChanged(object sender, TextChangedEventArgs e)
         {
-            //_crudManager.SetSelectActivity(TextBox2.SelectedItem);
+            
             var name = ActivityName.Text;
             var details = ActivityDetail.Text;
             _crudManager.ChangeActivityDetail(name, details);
-            // ActivityDetail.Text =  ;
-
-
-
-            // call the selected activity 
-            //output the activity detail
-            //allow editing 
-            //save changes
-
+            
         }
         private void Activity_SelectionChanged(object sender, SelectionChangedEventArgs e) { }
 
@@ -77,8 +60,8 @@ namespace ProjectWPF
 
         private void Button_DeleteActivity(object sender, RoutedEventArgs e)
         {
-            var bye = TextBox2.SelectedItem.ToString();
-            _crudManager.DeleteActivity(bye);
+            var DeletedActivity = TextBox2.SelectedItem.ToString();
+            _crudManager.DeleteActivity(DeletedActivity);
 
         }
 
