@@ -126,11 +126,11 @@ The Planner Application WPF displays a Weekly Planner with a column for each day
 
 #### Sprint 3 Retrospective 
 * Happy with completed MVP (minimal viable product) :
- * Functionality I set out to complete on GUI
- * Happy with GUI design
+  * Functionality I set out to complete on GUI
+  * Happy with GUI design
 * Following from Sprint 2 Retrospective 
- * Completed Unit Tests as I created method this sprint
- * Continuted to think about User Stories and how to split them 
+  * Completed Unit Tests as I created method this sprint
+  * Continuted to think about User Stories and how to split them 
 
  #### Project Retrospective 
  
