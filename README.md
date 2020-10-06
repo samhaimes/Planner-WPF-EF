@@ -16,8 +16,8 @@ A simple weekly planner created using C#, SQL and Entity Framework.
 ### General Information
 This project was to create a 3 - Tier Application.
 This had to include
-* WPF frontend
-* SQL database backend with at least two linked tables
+* WPF front end
+* SQL database back end with at least two linked tables
 * Use of Entity Framework to manage the model and database
 * Business Layer with CRUD application and unit tests
 
