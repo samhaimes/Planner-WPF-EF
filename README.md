@@ -5,7 +5,6 @@ A simple weekly planner created using C#, SQL and Entity Framework.
 * [General Information](#general-information)
 * [Definition of Done](#definition-of-done)
 * [Technologies](#technologies)
-* [Setup](#setup)
 * [Sprint 1](#sprint-1)
 * [Sprint 2](#sprint-2)
 * [Sprint 3](#sprint-3)
@@ -22,49 +21,53 @@ This had to include
 * Use of Entity Framework to manage the model and database
 * Business Layer with CRUD application and unit tests
 
-The Planner Application WPF displays a Weekly Planner with a column for each day of the week. 
-Ability to add activites that happen every week such as Work on weekdays 9-5.
-Ability to add one of activities as well providing information about each activity.
-Ability to delete and update planner as needed.
+The Planner Application WPF displays a Weekly Planner with a column for each day of the week
+* Ability to add activites that happen every week such as Work on weekdays 9-5
+* Ability to add one of activities as well providing information about each activity
+* Ability to delete and update planner as needed
 
 ### Definition of Done
 
 #### Project Definition of Done
 
-Working Application
-All unit tests passing
-All code working
-All acceptance criteria met
-All issues resolved 
-All code uploaded to GitHub
+* Working Application
+* All unit tests passing
+* All code working
+* All acceptance criteria met
+* All issues resolved 
+* All code uploaded to GitHub
 
 #### User Story Definition of Done
 
-Code for the functionally produced 
-User story met 
-Unit test written and passed
-Tested against acceptance criteria
-Project builds with no error
-
-
+* Code for the functionally produced 
+* User story met 
+* Unit test written and passed
+* Tested against acceptance criteria
+* Project builds with no error
 
 ### Technologies
 * Using Visual Studio
 * SQL Server
 * C#
 
-### Setup
-To run this project downloaded the Attempt 2 file 
-
-
 ### Sprint 1
 
 #### Sprint 1 Goal
 
-Create a WPF Weekly Planner (Minimal Viable Product) 
-Be able to put activities onto the planner 
+* Create a WPF Weekly Planner (Minimal Viable Product) 
+* Be able to put activities onto the planner 
 
 #### Sprint 1 Review
+* Completed Items
+ * Set up Project Board
+ * Set up Visual Studio and Github Repo
+ * Created initial user stories
+
+* Complete User Stories
+ * As a user I want to be able to select a list of my activites and add them to my planner
+
+* Incomplete User Stories
+ * As a User I want to add tasks to each day of the week so I can stay on track
 
 #### Sprint 1 Retrospective 
 * Pleased with how my first sprint went and first time creating a 3 - Tier App
@@ -77,10 +80,22 @@ Be able to put activities onto the planner
 
 #### Sprint 2 Goal
 
-Add an update function on the WPF
-Make sure there are passing Unit Tests for the methods in the CRUD
+* Add an update function on the WPF
+* Make sure there are passing Unit Tests for the methods in the CRUD
 
 #### Sprint  2 Review
+* Completed Items
+ * Set up Project Board
+ * Set up Visual Studio and Github Repo
+ * Created initial user stories
+
+* Complete User Stories
+ * As a User I want to add tasks to each day of the week so I can stay on track
+ * As a user I want to be able to add more detail to my activities so that I can change my planner when necessary 
+ 
+ * Incomplete User Stories
+  * As a User I want to be able to delete activities if my plans change so that I can keep my planner up to date 
+
 
 #### Sprint 2 Retrospective 
 * Made a lot more progress in the second sprint
@@ -94,13 +109,20 @@ Make sure there are passing Unit Tests for the methods in the CRUD
 
 #### Sprint 3 Goal
 
-Add a delete function 
-Make sure there are passing Unit Tests for all the delete Methods in the CRUD Manager
-
-Ensure the front end is easy to navigate
+* Add a delete function 
+* Make sure there are passing Unit Tests for all the delete Methods in the CRUD Manager
+* Ensure the front end is easy to navigate
 
 
 #### Sprint 3 Review
+
+* Complete User Stories
+ * As a User I want to be able to delete activities if my plans change so that I can keep my planner up to date 
+ 
+* Compete Epics
+ * As a user I want to be able to see clearly what I have on this week so I can stay organized
+ * As a User I want to delete or update my day on my planner so that I can keep my planner up to date
+ 
 
 #### Sprint 3 Retrospective 
 * Happy with completed MVP (minimal viable product) :
@@ -109,17 +131,34 @@ Ensure the front end is easy to navigate
 * Following from Sprint 2 Retrospective 
  * Completed Unit Tests as I created method this sprint
  * Continuted to think about User Stories and how to split them 
-* Future work on the Planner Application (Seen in Project Backlog)
+
+ #### Project Retrospective 
+ 
+ What have I learnt?
+ * How to incorporate all the the content from the last 6 weeks into one project 
+ * How to use agile
+ * How to use GitHub
+ * How to stylize a GUI 
+ 
+ What would I do differently next time?
+* Add messages on the Commits explaing what they are adding/updating which User Story it completes
+* Work on breaking down user stories 
+* Spend more time making working methods and then immediately unit testing
+* Really thinking about the Project DoD before beginning
+
+What would I do next?
+* Complete the User Stories from the sprint backlog 
  * Add Functions which allow multiple users 
  * Following from above be able to add and delete users 
  * Add accessibility levels eg a toddler cannot edit their own planner, parent would do for them, parent can edit teenagers but teen can't edit their parents
  * Add more weeks so you can plan for the following weeks 
  * Add months/ years 
  
- #### Project Retrospective 
- * Need to add messages on the Commits explaing what they are adding/updating which User Story it completes
- * Work on breaking down user stories on focusing on making working methods, one at a time (adding unit test after finishing writing the method)
  
+ ### Project Backlog 
+ ![User-Story](https://github.com/samhaimes/Project-Repo/projects/1#card-46458713)
+ ![User-Story](https://github.com/samhaimes/Project-Repo/projects/1#card-46458575)
+ ![User-Story](https://github.com/samhaimes/Project-Repo/projects/1#card-46458623)
  
 
 #### Class Diagram
