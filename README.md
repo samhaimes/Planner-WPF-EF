@@ -5,8 +5,9 @@ A simple weekly planner created using C#, SQL and Entity Framework.
 * [General Information](#general-information)
 * [Technologies](#technologies)
 * [Setup](#setup)
-* [Status](#status)
 * [Project Retrospective](#project-retrospective)
+* [Class Diagram](#class-diagram)
+* [Project Board](#project-board)
 
 ### General Information
 This project was to create a 3 - Tier Application.
@@ -28,7 +29,6 @@ Ability to delete and update planner as needed.
 
 ### Setup
 
-### Status
 
 
 
@@ -51,3 +51,20 @@ Ability to delete and update planner as needed.
 * Next Sprint I need to make sure I have a unit test for each method before moving on to the next method 
 
 #### Sprint 3 Retrospective 
+* Happy with completed MVP (minimal viable product) :
+ * Functionality I set out to complete on GUI
+ * Happy with GUI design
+* Following from Sprint 2 Retrospective 
+ * Completed Unit Tests as I created method this sprint
+ * Continuted to think about User Stories and how to split them 
+* Future work on the Planner Application 
+ * Add Functions which allow multiple users 
+ * Following from above be able to add and delete users 
+ * Add accessibility levels eg a toddler cannot edit their own planner, parent would do for them, parent can edit teenagers but teen can't edit their parents
+ * Add more weeks so you can plan for the following weeks 
+ * Add months/ years 
+
+### Class Diagram
+
+
+### Project Board
