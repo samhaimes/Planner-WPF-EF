@@ -1,0 +1,37 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Planner.Activities">
+    <Position X="6.5" Y="8.5" Width="2.25" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAQAAAAEAAAAAAAAAAAAAAAAAAAAAEAAAAA=</HashCode>
+      <FileName>Activities.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planner.FamilyMember">
+    <Position X="3.5" Y="8.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAAAAAIAEAAAAAAAAAAEAAAAAAAgAAAAAAAg=</HashCode>
+      <FileName>FamilyMember.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Planner.Link">
+    <Position X="6.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAAAIAQAAAAEAAAAAAAAAAEgAAAAAAAAAIABAAA=</HashCode>
+      <FileName>Link.cs</FileName>
+    </TypeIdentifier>
+    <ShowAsAssociation>
+      <Property Name="FamilyMember" />
+      <Property Name="Day" />
+      <Property Name="Activities" />
+    </ShowAsAssociation>
+  </Class>
+  <Class Name="Planner.Day">
+    <Position X="9.25" Y="8.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAEAAABAAA=</HashCode>
+      <FileName>Day.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
