@@ -14,6 +14,7 @@ A simple weekly planner created using C#, SQL and Entity Framework.
 * [Project Board](#project-board)
 
 ### General Information
+
 This project was to create a 3 - Tier Application.
 This had to include
 * WPF front end
@@ -28,6 +29,23 @@ Ability to delete and update planner as needed.
 
 ### Definition of Done
 
+#### Project Definition of Done
+
+Working Application
+All unit tests passing
+All code working
+All acceptance criteria met
+All issues resolved 
+All code uploaded to GitHub
+
+#### User Story Definition of Done
+
+Code for the functionally produced 
+User story met 
+Unit test written and passed
+Tested against acceptance criteria
+Project builds with no error
+
 
 
 ### Technologies
@@ -39,9 +57,12 @@ Ability to delete and update planner as needed.
 To run this project downloaded the Attempt 2 file 
 
 
-#### Sprint 1
+### Sprint 1
 
 #### Sprint 1 Goal
+
+Create a WPF Weekly Planner (Minimal Viable Product) 
+Be able to put activities onto the planner 
 
 #### Sprint 1 Review
 
@@ -52,9 +73,12 @@ To run this project downloaded the Attempt 2 file
 * Next Sprint sort front end, TOO MUCH going on 
 * Next Sprint need to take it step my step & take breaks so I have fresh eyes 
  
-#### Sprint 2
+### Sprint 2
 
 #### Sprint 2 Goal
+
+Add an update function on the WPF
+Make sure there are passing Unit Tests for the methods in the CRUD
 
 #### Sprint  2 Review
 
@@ -66,9 +90,15 @@ To run this project downloaded the Attempt 2 file
   * Ensured I had more breaks which helped solve problems faster
 * Next Sprint I need to make sure I have a unit test for each method before moving on to the next method 
 
-#### Sprint 3
+### Sprint 3
 
 #### Sprint 3 Goal
+
+Add a delete function 
+Make sure there are passing Unit Tests for all the delete Methods in the CRUD Manager
+
+Ensure the front end is easy to navigate
+
 
 #### Sprint 3 Review
 
@@ -86,7 +116,7 @@ To run this project downloaded the Attempt 2 file
  * Add more weeks so you can plan for the following weeks 
  * Add months/ years 
  
- #~## Project Retrospective 
+ #### Project Retrospective 
  * Need to add messages on the Commits explaing what they are adding/updating which User Story it completes
  * Work on breaking down user stories on focusing on making working methods, one at a time (adding unit test after finishing writing the method)
  
@@ -116,7 +146,7 @@ To run this project downloaded the Attempt 2 file
 ![Start-Of-Sprint-Three](https://github.com/samhaimes/Project-Repo/blob/master/Start%20of%20Sprint%203.1%20.png)
 
 #### End of Sprint 3
- ![End-Of-Sprint-Three](https://github.com/samhaimes/Project-Repo/commit/d51389728c3adf3c0f5d57acef0cdd11e32c594a)
+ ![End-Of-Sprint-Three](https://github.com/samhaimes/Project-Repo/blob/master/End%20of%20Sprint%203.png)
  
  
  
